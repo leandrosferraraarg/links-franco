@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Entrar · Mis videos</title><link rel="stylesheet" href="assets/style.css?v=4"><link rel="stylesheet" href="assets/mobile.css?v=4"></head>
+<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Entrar · Mis videos</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/style.css?v=4"><link rel="stylesheet" href="assets/mobile.css?v=4"></head>
 <body><header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▶</span> Mis videos</a></header>
 <main class="setup"><h1>Entrar para editar</h1><p>Usá el usuario y la contraseña del administrador.</p>
 <?php if ($error): ?><p class="notice error" role="alert"><?= e($error) ?></p><?php endif ?>

@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$error) exit;
 }
 ?>
-<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Instalar · Mis videos</title><link rel="stylesheet" href="../assets/style.css?v=4"><link rel="stylesheet" href="../assets/mobile.css?v=4"></head>
+<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Instalar · Mis videos</title><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css?v=4"><link rel="stylesheet" href="../assets/mobile.css?v=4"></head>
 <body><header class="topbar"><span class="brand"><span class="brand-icon" aria-hidden="true">▶</span> Mis videos</span></header>
 <main class="setup"><h1>Primero, un pequeño ajuste</h1><p>Configurá dónde guardar tus favoritos y quién puede editarlos.</p>
 <?php if ($error): ?><p class="notice error" role="alert"><?= e($error) ?></p><?php endif ?>
