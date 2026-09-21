@@ -137,6 +137,10 @@ $notice = $_SESSION['notice'] ?? ''; unset($_SESSION['notice']);
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff"><title><?= e($title) ?></title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mis videos">
     <link rel="stylesheet" href="assets/style.css?v=4"><link rel="stylesheet" href="assets/mobile.css?v=4"><script src="assets/app.js?v=4" defer></script>
 </head>
 <body>
