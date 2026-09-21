@@ -1,0 +1,50 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Simular sin subir nada al FTP (recomendado para probar)"
+        type: boolean
+        default: true
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: ./
+          server-dir: /videos/
+          dangerous-clean-slate: false
+          dry-run: ${{ inputs.dry_run == true }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/desktop.ini
+            **/ehthumbs.db
+            **/$RECYCLE.BIN/**
+            **/.vscode/**
+            **/.idea/**
+            **/*.swp
+            **/*.swo
+            **/*~
+            **/*.log
+            **/*.tmp
+            **/*.bak
+            **/*.cache
+            **/node_modules/**
+            **/vendor/**

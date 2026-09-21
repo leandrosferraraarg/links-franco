@@ -1,0 +1,20 @@
+/* Touch controls and narrow screens, including the editing forms. */
+html { -webkit-text-size-adjust: 100%; }
+.form-grid > label, .owner { min-width: 0; }
+.owner { overflow-wrap: anywhere; }
+.button, .chip { min-height: 44px; }
+.form-actions, .pagination { flex-wrap: wrap; }
+@media (max-width: 760px) {
+    input, select, input[type=file] { font-size: 16px; }
+    .editor summary { min-height: 44px; align-content: center; }
+    .person-form > input[name=name] { flex-basis: calc(100% - 54px); }
+    .pagination { gap: 10px; }
+}
+@media (max-width: 359px) {
+    main { padding-inline: 10px; }
+    .topbar { padding-inline: 10px; }
+}
+@media (hover: none) {
+    .card:hover { transform: none; }
+    .card:hover .play { scale: 1; }
+}

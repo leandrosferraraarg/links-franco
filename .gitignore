@@ -1,0 +1,29 @@
+/data/*
+!/data/.htaccess
+/uploads/*
+!/uploads/.htaccess
+/.local/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs y temporales
+*.log
+*.tmp
+*.bak
+*.cache
+
+# Dependencias (por si se agregan a futuro)
+/vendor/
+/node_modules/
